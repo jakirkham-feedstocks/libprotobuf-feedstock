@@ -12,24 +12,19 @@ source:
 
 build:
   number: 0
-  skip: true  # [win and py35]
-  features:
-    - vc9     # [win and py27]
-    - vc10    # [win and py34]
-    - vc14    # [win and (py35 or py36)]
 
 requirements:
   build:
-    - toolchain
-    - git                # [win]
-    - cmake              # [win]
-    - autoconf           # [unix]
-    - automake           # [unix]
-    - libtool            # [unix]
-    - pkg-config         # [unix]
+    - {{ compiler("cxx") }}
+    - git                    # [win]
+    - cmake                  # [win]
+    - autoconf               # [unix]
+    - automake               # [unix]
+    - libtool                # [unix]
+    - pkg-config             # [unix]
+    - unzip                  # [unix]
+  host:
     - zlib 1.2.11
-    - python             # [win]
-    - unzip              # [unix]
   run:
     - zlib 1.2.11
 
