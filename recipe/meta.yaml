@@ -24,9 +24,9 @@ requirements:
     - pkg-config             # [unix]
     - unzip                  # [unix]
   host:
-    - zlib 1.2.11
+    - zlib
   run:
-    - zlib 1.2.11
+    - zlib
 
 test:
   commands:
